@@ -6,6 +6,7 @@ describe "the add a lesson process" do
     click_on 'Create new lesson'
     fill_in 'Name', :with => 'Ruby'
     fill_in 'Content', :with => 'Rails'
+    fill_in 'Number', :with => '1'
     click_on 'Submit'
     expect(page).to have_content 'Lessons'
   end
@@ -14,5 +15,5 @@ describe "the add a lesson process" do
     visit new_lesson_path
     click_on 'Submit'
     expect(page).to have_content 'errors'
-  end  
+  end
 end

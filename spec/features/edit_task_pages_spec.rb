@@ -6,6 +6,7 @@ describe 'the edit a lesson process' do
     visit lesson_path(lesson)
     click_on 'Edit'
     fill_in "Name", :with => 'dooby'
+    fill_in "Content", :with => 'scooby'
     click_on 'Submit'
     expect(page).to have_content 'dooby'
   end
